@@ -5,6 +5,7 @@ export const ButtonLanguageSwitcher = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: var(--gray-bg);
 
   &.selected {
     font-weight: 900;

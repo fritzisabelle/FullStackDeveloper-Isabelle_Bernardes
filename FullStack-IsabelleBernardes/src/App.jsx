@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { GlobalStyles } from "./style/GlobalStyle";
 import HeaderTemplate from "./components/Header";
 import { HomeTemplate } from "./Pages/Home/Home";

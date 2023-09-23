@@ -2,12 +2,15 @@
   "translation": {
     "welcome": "Welcome to the best webapp in the world!",
     "subtitle": "Where you can find anything you want",
-    "who": "WHO AM I",
-    "what": "WHAT I DO",
+    "who": "ABOUT ME",
+    "what": "SERVICES",
     "work": "RECENT WORK",
     "contact": "TALK TO ME",
     "projectTypeAppWeb": "Web Application",
     "motolinkDescription": "A WebApplication wich connects the best companies to the fastest delivery boys on the market",
-    "detailButton": "See more details"
+    "detailButton": "See more details",
+    "tech-heroDetail": "TECHNOLOGY",
+    "work-heroDetail": "WORK",
+    "dev-heroDetail": "DEVELOPMENT"
   }
 }

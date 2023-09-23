@@ -5,7 +5,8 @@ export const HeaderTemplateStyle = styled.header`
   top: 0px;
   left: 0px;
   min-width: 100%;
-  padding: 20px;
+  padding: 1.5em;
+  z-index: 999;
 
   &.open {
     z-index: 1;
@@ -17,6 +18,7 @@ export const HeaderTemplateStyle = styled.header`
   align-items: center;
 
   .logo {
+    filter: invert();
     height: auto;
     width: 124px;
   }
@@ -51,7 +53,7 @@ export const HeaderTemplateStyle = styled.header`
 
       li {
         a {
-          color: var(--black-13);
+          color: var(--gray-bg);
           font-weight: 500;
           text-decoration: none;
           font-size: 16px;
@@ -59,7 +61,7 @@ export const HeaderTemplateStyle = styled.header`
 
           &:hover {
             color: orange;
-            font-weight: 700;
+            font-weight: 500;
           }
         }
         display: flex;
@@ -69,6 +71,7 @@ export const HeaderTemplateStyle = styled.header`
     }
 
     .logo {
+      filter: invert();
       height: auto;
       width: auto;
     }

@@ -15,29 +15,41 @@ export const GlobalStyles = createGlobalStyle`
         --gray-bg: #F5F5F5;
         --gray-border: #f1f1f1;
         --orange: #E75A35;
-        --black-13: #131313;
+        --black-1: #F5F5F5;
+        --black-2: #EEEEEE;
+        --black-3: #DCDCDC;
+        --black-4: #CDCDCD;
+        --black-8: #6F6F6F;
         --black-12: #242424;
+        --black-13: #131313;
     }
 
     body {
+        max-width: 100vw;
         display: flex;
         justify-content: center;
-        background-color: var(--gray-bg);
+        background-color: var(--black-13);
+        overflow-x: hidden;  
+    }
+
+    body::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    body::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color:var(--black-8);
+        border-radius: 6px; /* Borda arredondada do polegar */
     }
     
     .App{
-        margin-top: 100px;
-        width: 100vw;
-        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
         align-items: center;
         justify-content: center;
-        background-color: var(--gray-bg);
-    }
-
-    
-
-    h1 {
-        color: red;
     }
 
     button {
