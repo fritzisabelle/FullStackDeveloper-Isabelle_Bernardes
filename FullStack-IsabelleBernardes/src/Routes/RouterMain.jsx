@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import { Case } from "../Pages/Case/Case";
+import { Home } from "../Pages/Home/Home";
 
-export const RounterMain = () => {
+export const RouterMain = () => {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/case" element={<Register />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/case" element={<Case />} />
     </Routes>
   );
 };

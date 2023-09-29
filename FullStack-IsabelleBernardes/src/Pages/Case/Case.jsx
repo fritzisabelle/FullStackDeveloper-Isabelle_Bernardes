@@ -1,3 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 export const Case = () => {
-  return <h1>Case</h1>;
+  const { t } = useTranslation();
+
+  return (
+    <>
+    <h1>Case</h1>
+    </>
+  );
 };

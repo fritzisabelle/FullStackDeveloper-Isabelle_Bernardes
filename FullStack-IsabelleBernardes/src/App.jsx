@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { GlobalStyles } from "./style/GlobalStyle";
 import HeaderTemplate from "./components/Header";
-import { HomeTemplate } from "./Pages/Home/Home";
+// import { Home } from "./Pages/Home/Home";
+import { RouterMain } from "./Routes/RouterMain";
 
 function App() {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <HeaderTemplate />
-      <HomeTemplate />
+      <RouterMain />
       <GlobalStyles />
     </div>
   );
