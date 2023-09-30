@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         font-family: forma-djr-banner, sans-serif;
+        letter-spacing: .2px;
     }
 
     :root {
@@ -25,15 +26,20 @@ export const GlobalStyles = createGlobalStyle`
         --black-12: #242424;
         --black-13: #131313;
 
-        --text-1: 1em;
-        --text-2: 1.5em;
-        --text-3: 2em;
-
         --title-h1: 10em;
         --title-h2: 8em;
         --title-h3: 3em;
         --title-h4: 1em;
         --title-h5: 1em;
+
+        --text-1: 1em;
+        --text-2: 1.5em;
+        --text-3: 2em;
+
+        --text-weight-Black: 900; 
+        --text-weight-Bold: 700;
+        --text-weight-Regular: 500; 
+        --text-weight-Light: 400; 
     }
 
     body {

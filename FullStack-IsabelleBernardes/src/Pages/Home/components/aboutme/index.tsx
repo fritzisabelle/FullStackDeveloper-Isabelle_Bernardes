@@ -2,26 +2,28 @@ import React from 'react';
 import profilePicture from "../../../../assets/imgs/profile.jpg"
 import { IntersectionDetail } from "../fragments/intersection"
 import { AboutMeSectionContainer } from './style';
+import { softSkills, metodologies, aboutMeText } from '../../../../utils/skillsList';
+import { AboutMeCard } from '../fragments/aboutMeCard';
+
+
 
 export const AboutMeSection = () => {
   return (
     <AboutMeSectionContainer>
       <IntersectionDetail />
       <div className="profilePicture-container">
-        <p>BEHIND</p>
-        <img src={profilePicture} alt="profile picture of author" className="side-picture" />
-        <img src={profilePicture} alt="profile picture of author" className="middle-picture" />
-        <img src={profilePicture} alt="profile picture of author" className="side-picture" />
-        <p>THE SKILLS</p>
+        <p className='textDetail textTop'>BEHIND</p>
+        <div className='profilePicture-container'>
+          <img src={profilePicture} alt="profile picture of author" className="profilePicture side-picture" />
+          <img src={profilePicture} alt="profile picture of author" className="profilePicture middle-picture" />
+          <img src={profilePicture} alt="profile picture of author" className="profilePicture side-picture" />
+        </div>
+        <p className='textDetail textBottom'>THE SKILLS</p>
       </div>
       <div className="softSkills-cards-container">
-        <div className="softSkill-card">
-          <div className="softSkill-card_header">
-            <p className="softSkill-card_title">About Me</p>
-            <small className="softSkill-card_number">/1</small>
-          </div>
-          <p>Me chamo Isabelle, sou do Rio de Janeiro, e para o desgosto dos meus conterrâneos, praia não é o meu lugar preferido. Adoro cozinhar e ler livros. Gosto de ficar no meu espaço mas também gosto de momentos de extroversão</p>
-        </div>
+        <AboutMeCard title='About Me' number={1} text={aboutMeText} />
+        <AboutMeCard title='As a coworker' number={2} skillsList={softSkills} />
+        <AboutMeCard title='Metodologies' number={3} skillsList={metodologies} />
       </div>
     </AboutMeSectionContainer>
   )

@@ -11,7 +11,4 @@ export const IntersectionContainer = styled.div`
           width: 3em;
         }
 
-    .arrowTop{
-        border: 1px solid red;
-    }
 `
