@@ -15,6 +15,8 @@ export const GlobalStyles = createGlobalStyle`
         --gray-bg: #F5F5F5;
         --gray-border: #f1f1f1;
         --orange: #E75A35;
+        --pink: #E064CC;
+        --blue: #2100EF;
         --black-1: #F5F5F5;
         --black-2: #EEEEEE;
         --black-3: #DCDCDC;
@@ -22,6 +24,16 @@ export const GlobalStyles = createGlobalStyle`
         --black-8: #6F6F6F;
         --black-12: #242424;
         --black-13: #131313;
+
+        --text-1: 1em;
+        --text-2: 1.5em;
+        --text-3: 2em;
+
+        --title-h1: 10em;
+        --title-h2: 8em;
+        --title-h3: 3em;
+        --title-h4: 1em;
+        --title-h5: 1em;
     }
 
     body {

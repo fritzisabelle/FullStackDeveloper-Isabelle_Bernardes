@@ -1,7 +1,7 @@
-import { styled } from "styled-components";
+import styled from 'styled-components'
 
-export const HeroSectionTemplate = styled.section`
-  display: flex;
+export const HeroContainerStyle = styled.section`
+display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -45,7 +45,7 @@ export const HeroSectionTemplate = styled.section`
     z-index: 3;
     text-align: center;
     color: var(--black-3);
-    font-size: 8em;
+    font-size: var(--title-h1);
     line-height: 0.8;
     letter-spacing: 0.02em;
   }
@@ -64,7 +64,7 @@ export const HeroSectionTemplate = styled.section`
       color: var(--black-3);
     }
 
-    div {
+    .itens-bottom_item {
       display: flex;
       gap: 2em;
     }
@@ -74,19 +74,9 @@ export const HeroSectionTemplate = styled.section`
       align-items: center;
       flex-direction: column;
       gap: 1em;
-
-      .intersection-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-
-        img {
-          width: 3em;
-        }
       }
     }
-  }
+  
 
   @keyframes left {
     0%,
@@ -107,4 +97,4 @@ export const HeroSectionTemplate = styled.section`
       right: -200px;
     }
   }
-`;
+`
