@@ -26,8 +26,6 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         max-width: 100vw;
-        display: flex;
-        justify-content: center;
         background-color: var(--black-13);
         overflow-x: hidden;  
     }
@@ -42,14 +40,14 @@ export const GlobalStyles = createGlobalStyle`
 
     body::-webkit-scrollbar-thumb {
         background-color:var(--black-8);
-        border-radius: 6px; /* Borda arredondada do polegar */
+        border-radius: 6px; 
     }
     
     .App{
         max-width: 100%;
-        max-height: 100%;
         align-items: center;
         justify-content: center;
+
     }
 
     button {
