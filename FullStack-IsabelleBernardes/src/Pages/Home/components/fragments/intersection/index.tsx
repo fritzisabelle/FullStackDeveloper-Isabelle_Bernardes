@@ -1,3 +1,4 @@
+import React from 'react'
 import intersection from "../../../../../assets/Intersect.svg";
 import { IntersectionContainer } from "./style";
 

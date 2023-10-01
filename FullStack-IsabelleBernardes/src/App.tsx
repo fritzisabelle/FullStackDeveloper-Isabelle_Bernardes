@@ -1,3 +1,4 @@
+import React from 'react'
 import { useTranslation } from "react-i18next";
 import { GlobalStyles } from "./style/GlobalStyle";
 import HeaderTemplate from "./components/Header";
