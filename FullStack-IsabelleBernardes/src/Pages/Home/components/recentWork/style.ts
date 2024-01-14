@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const RecentWorkStyle = styled.section`
 position: relative;
@@ -7,78 +8,11 @@ color: var(--black-3);
 padding: 6em 0px;
 
 
-h2 {
-  font-size: var(--title-h2);
-  white-space: nowrap;
-
-  color: transparent;
-    -webkit-text-stroke-width: .3px;
-    -webkit-text-stroke-color: var(--black-1);
-}
-
-h3 {
-  font-size: var(--title-h3);
-  white-space: nowrap;
-  overflow-x: hidden;
-
-  span {
-    color: transparent;
-    -webkit-text-stroke-width: .3px;
-    -webkit-text-stroke-color: var(--black-1);
-  }
-}
-
 .jobCards-container {
-display: flex;
-gap: 16px;
-max-width: 100%;
-padding: 0px 2em;
-
-.jobCard {
-  width: 100%
-}
-
-.jobCard_cover {
-    width: 100%;
-    height: 535px;
-    object-fit: cover;
-  }
-
-.jobCard_ProjectCategory_Tag {
-  width: 100%;
-  background: red;
-  text-align: center;
-  padding: 0.15em;
-}
-
-.jobCard_details {
   display: flex;
-  justify-content: space-between;
-  padding: 1em 0px;
-
-  h5 {
-    font-size: 1em;
-  }
-
-  p {
-    font-size: 0.8em;
-  }
-}
-
-.jobCard_details_button{
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: none;
-  padding: .5em;
-}
-
-.jobCard_details_button:hover{
-  background: var(--orange);
-  padding: .5em;
-}
-
-    
+  gap: 16px;
+  max-width: 100%;
+  padding: 0px 2em;    
   }
 
   .button-container{
@@ -98,6 +32,33 @@ padding: 0px 2em;
         background-color: transparent;
         border: 1px solid var(--black-3);
         border-radius: 50px;
+      }
+      
+      .button-seeMore:hover{
+        background-color: var(--orange);
+        font-weight: 700;
+      }
     }
-    }
+`
+
+export const Title = styled(motion.h3)`
+  font-size: var(--title-h3);
+  white-space: nowrap;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  span {
+    color: transparent;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: var(--black-1);
+  }
+`
+
+export const Subtitle = styled(motion.h2)`
+  font-size: var(--title-h2);
+  white-space: nowrap;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  color: transparent;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: var(--black-1);
 `

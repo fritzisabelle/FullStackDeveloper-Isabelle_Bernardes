@@ -1,24 +1,31 @@
 import React from 'react';
 import profilePicture from "../../../../assets/imgs/profile.jpg"
+import arrow from "../../../../assets/imgs/arrowRight.svg"
 import { IntersectionDetail } from "../fragments/intersection"
-import { AboutMeSectionContainer } from './style';
+import { AboutMeSectionContainer, DetailTitle } from './style';
 import { softSkills, metodologies, aboutMeText } from '../../../../utils/skillsList';
 import { AboutMeCard } from '../fragments/aboutMeCard';
+import { useScroll, useTransform } from "framer-motion"
+import { SlideButton } from '../../../../style/Buttons/SlideButton/slideButton.component';
 
 
 
 export const AboutMeSection = () => {
+  const { scrollYProgress } = useScroll();
+  const x = useTransform(scrollYProgress, [0, 1], [400, -400]);
+  const x2 = useTransform(scrollYProgress, [0, 1], [-800, 1000]);
+
   return (
-    <AboutMeSectionContainer>
+    <AboutMeSectionContainer id="aboutMe">
       <IntersectionDetail />
       <div className="profilePicture-container">
-        <p className='textDetail textTop'>BEHIND</p>
+        <DetailTitle style={{ x: x2 }} className='textDetail textTop'>BEHIND</DetailTitle>
         <div className='profilePicture-container'>
           <img src={profilePicture} alt="profile picture of author" className="profilePicture side-picture" />
           <img src={profilePicture} alt="profile picture of author" className="profilePicture middle-picture" />
           <img src={profilePicture} alt="profile picture of author" className="profilePicture side-picture" />
         </div>
-        <p className='textDetail textBottom'>THE SKILLS</p>
+        <DetailTitle style={{ x }} className='textDetail textBottom'>THE SKILLS</DetailTitle>
       </div>
       <div className="softSkills-cards-container">
         <AboutMeCard title='About Me' number={1} text={aboutMeText} />

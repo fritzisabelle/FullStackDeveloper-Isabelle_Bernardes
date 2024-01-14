@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
 
 export const AboutMeSectionContainer = styled.section`
 overflow-x: hidden;
@@ -48,4 +49,8 @@ overflow-x: hidden;
 
     justify-content: center ;
 }
+`
+
+export const DetailTitle = styled(motion.p)`
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 `

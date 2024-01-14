@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         font-family: forma-djr-banner, sans-serif;
-        letter-spacing: .2px;
+        letter-spacing: 1px;
     }
 
     :root {
@@ -18,11 +18,13 @@ export const GlobalStyles = createGlobalStyle`
         --orange: #E75A35;
         --pink: #E064CC;
         --blue: #2100EF;
+        --green: #309D09;
         --black-1: #F5F5F5;
         --black-2: #EEEEEE;
         --black-3: #DCDCDC;
         --black-4: #CDCDCD;
         --black-8: #6F6F6F;
+        --black-10: #484848;
         --black-12: #242424;
         --black-13: #131313;
 
@@ -39,7 +41,7 @@ export const GlobalStyles = createGlobalStyle`
         --text-weight-Black: 900; 
         --text-weight-Bold: 700;
         --text-weight-Regular: 500; 
-        --text-weight-Light: 400; 
+        --text-weight-Light: 300; 
     }
 
     body {

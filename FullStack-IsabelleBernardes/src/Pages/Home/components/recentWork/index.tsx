@@ -3,28 +3,39 @@ import { useTranslation } from 'react-i18next';
 import { JobList } from '../../../../utils/jobsList';
 import arrowRight from "../../../../assets/imgs/arrowRight.svg"
 import { JobCardContainer } from './components/jobCard';
-import { RecentWorkStyle } from './style';
+import { RecentWorkStyle, Subtitle, Title } from './style';
+import { useScroll, useTransform } from "framer-motion"
+import { Button } from '../../../../style/Buttons/SlideButton/button.style';
+import { Link } from 'react-router-dom';
 
 export const RecentWorkSection = () => {
     const { t } = useTranslation();
+    const { scrollYProgress } = useScroll();
+    const x = useTransform(scrollYProgress, [0, 1], [0, -800]);
+    const x2 = useTransform(scrollYProgress, [0, 1], [-100, 800]);
+    const JobsToRender = JobList.slice(0, 4)
 
     return (
-        <RecentWorkStyle>
-            <h3>RECENT WORK <span>RECENT WORK</span> RECENT WORK <span>RECENT WORK</span> RECENT WORK <span>RECENT WORK</span> </h3>
-            <h2>DESIGN & DEVELOPMENT</h2>
+        <RecentWorkStyle id="recentWorkSection">
+            <Title style={{ x }} className='recentWork-subtitle'>RECENT WORK <span>RECENT WORK</span> RECENT WORK <span>RECENT WORK</span> RECENT WORK <span>RECENT WORK</span> </Title>
+            <Subtitle style={{ x: x2 }}>DESIGN & DEVELOPMENT</Subtitle>
             <div className="jobCards-container">
-                {JobList ? (
-                    JobList.map((job) => {
-                        return <JobCardContainer key={job.id} {...job} />;
+                {JobsToRender ? (
+                    JobsToRender.map((job) => {
+                        return (
+                            <JobCardContainer key={job.id} {...job} />
+                        )
                     })
                 ) :
                     (<h2>No jobs yet!</h2>)}
             </div>
             <div className="button-container">
-                <button className="button-seeMore">
-                    Ver mais projetos
-                    <img src={arrowRight} alt="arrow icon" />
-                </button>
+                <Link to="/recentWork">
+                    <Button buttonStyle='Icon&Text'>
+                        {t("seeMore")}
+                        <img src={arrowRight} alt="arrow icon" />
+                    </Button>
+                </Link>
             </div>
         </RecentWorkStyle>
     )

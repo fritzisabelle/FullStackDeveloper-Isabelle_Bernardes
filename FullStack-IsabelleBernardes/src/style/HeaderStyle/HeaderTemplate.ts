@@ -24,7 +24,7 @@ export const HeaderTemplateStyle = styled.header`
   }
 
   ul {
-    display: none;
+    display: none;    
   }
 
   .utils-menu {
@@ -45,28 +45,29 @@ export const HeaderTemplateStyle = styled.header`
     }
 
     ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1.5fr 1fr;
-      text-align: center;
-      justify-items: center;
-      width: 51%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
 
       li {
-        a {
+        box-sizing: content-box;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        
+        button {
+          background-color: transparent;
+          border: none;
           color: var(--gray-bg);
-          font-weight: 500;
+          font-weight: var(--text-weight-Light);
           text-decoration: none;
           font-size: 16px;
           letter-spacing: 1px;
 
           &:hover {
             color: orange;
-            font-weight: 500;
           }
         }
-        display: flex;
-        align-items: center;
-        padding: 2px;
       }
     }
 

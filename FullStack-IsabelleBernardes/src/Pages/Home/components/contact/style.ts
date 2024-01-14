@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
 
 export const ContactSectionStyle = styled.section`
 overflow-x: hidden;
@@ -6,11 +7,34 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
-h2 {
+.scrollContainer{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 24px;
     white-space: nowrap;
-    font-size: var(--title-h2);
-    padding-bottom: 4rem;
-    color: var(--black-3);
+
+    h2 {
+      display: inline-block;
+      font-size: var(--title-h2);
+      padding-bottom: 4rem;
+      color: var(--black-3);
+    }
+
+    animation: scrollText 30s linear infinite;
+}
+
+.scrollContainer:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .contactButtons-container{

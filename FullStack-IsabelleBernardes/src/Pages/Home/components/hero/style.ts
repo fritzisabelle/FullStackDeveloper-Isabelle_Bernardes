@@ -41,14 +41,27 @@ display: flex;
     position: absolute;
   }
 
-  h1 {
+ 
+
+.crazyText {
     z-index: 3;
-    text-align: center;
-    color: var(--black-3);
-    font-size: var(--title-h1);
-    line-height: 0.8;
-    letter-spacing: 0.02em;
-  }
+    max-height: 46vh;
+    padding-top: 4px;
+    overflow-y: hidden;
+    width: 100vw;
+    word-wrap: break-word;
+
+    h1 {
+      font-family: forma-djr-banner, monospace;
+      height: 100%;
+      text-align: center;
+      color: var(--black-3);
+      font-size: 12vw;
+      line-height: 0.85;
+      letter-spacing: 0.02em;
+    }
+
+  } 
 
   .itens-bottom {
     z-index: 5;
@@ -62,6 +75,7 @@ display: flex;
 
     p {
       color: var(--black-3);
+      font-weight: var(--text-weight-Light);
     }
 
     .itens-bottom_item {
@@ -70,11 +84,18 @@ display: flex;
     }
 
     .work-button-container {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 1em;
-      }
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+        
+        button {
+          color: var(--black-1);
+          background-color: var(--black-13);
+          border: none;
+          font-weight: var(--text-weight-Bold);
+          }
+        }
     }
   
 

@@ -1,23 +1,27 @@
 import React, { useState } from 'react'
 import { ContactSectionStyle } from './style';
+import { useTranslation } from 'react-i18next';
 
 export const ContactSection = () => {
-    const [open, setOpen] = useState(true);
+    const { t } = useTranslation()
 
     return (
-        <ContactSectionStyle>
-            <h2>LET’S TALK? - GET IN TOUCH - DON’T BE SHY - WANNA HAVE A COFFEE? -</h2>
+        <ContactSectionStyle id="contact">
+            <div className='scrollContainer'>
+                <h2>{t("contactCTA")}</h2>
+                <h2>{t("contactCTA")}</h2>
+            </div>
             <div className='contactButtons-container'>
                 <div>
-                    <h3>connect with me</h3>
+                    <h3>{t("linkedinCTA")}</h3>
                     <button>https://www.linkedin.com/in/euisabellebernardes/</button>
                 </div>
                 <div>
-                    <h3>Email me</h3>
-                    <button>Clique aqui para me enviar um email</button>
+                    <h3>{t("emailCTA")}</h3>
+                    <button>{t("emailButtonCTA")}</button>
                 </div>
                 <div>
-                    <h3>FIND ME ON GITHUB</h3>
+                    <h3>{t("githubCTA")}</h3>
                     <button>https://github.com/fritzisabelle</button>
                 </div>
             </div>
