@@ -15,30 +15,39 @@ padding: 6em 0px;
   padding: 0px 2em;    
   }
 
-  .button-container{
-      width: 100%;
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+
+
+    .button-seeMore{
       display: flex;
-      justify-content: center;
-      padding-top: 4em;
+      align-items: center;
+      gap: 6em;
+      padding: .5em 1em;
 
-
-      .button-seeMore{
-        display: flex;
-        align-items: center;
-        gap: 6em;
-        padding: .5em 1em;
-
-        color: var(--black-3);
-        background-color: transparent;
-        border: 1px solid var(--black-3);
-        border-radius: 50px;
-      }
-      
-      .button-seeMore:hover{
-        background-color: var(--orange);
-        font-weight: 700;
-      }
+      color: var(--black-3);
+      background-color: transparent;
+      border: 1px solid var(--black-3);
+      border-radius: 50px;
     }
+    
+    .button-seeMore:hover{
+      background-color: var(--orange);
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 720px) {
+    padding: 3em 0px;
+
+    .jobCards-container {
+  padding: 0px 20px;    
+  }
+  }
+
 `
 
 export const Title = styled(motion.h3)`
@@ -51,6 +60,10 @@ export const Title = styled(motion.h3)`
     -webkit-text-stroke-width: .3px;
     -webkit-text-stroke-color: var(--black-1);
   }
+
+  @media (max-width: 720px) {
+    font-size: var(--title-h4);
+  }
 `
 
 export const Subtitle = styled(motion.h2)`
@@ -61,4 +74,8 @@ export const Subtitle = styled(motion.h2)`
   color: transparent;
     -webkit-text-stroke-width: .3px;
     -webkit-text-stroke-color: var(--black-1);
+
+    @media (max-width: 720px) {
+    font-size: var(--title-h3);
+  }
 `
