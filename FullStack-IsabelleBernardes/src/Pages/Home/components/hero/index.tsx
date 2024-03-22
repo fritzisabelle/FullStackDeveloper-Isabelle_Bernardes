@@ -37,24 +37,6 @@ export const HeroSection = () => {
 
             iteration += 1 / 3;
         }, 30);
-
-        // interval = setInterval(() => {
-        //     const lettersSplit = originalText.split("").map((letter, index) => {
-        //         if (index <= iteration) {
-        //             setCrazyTextContent(originalText);
-        //         };
-
-        //         return letters[Math.floor(Math.random() * originalText.length)];
-        //     }).join("");
-
-        //     if (iteration >= originalText.length) {
-        //         clearInterval(iteration);
-        //     }
-
-        //     iteration += 1 / 3;
-        //     setCrazyTextContent(lettersSplit);
-        // }, 50);
-
     };
 
     return (

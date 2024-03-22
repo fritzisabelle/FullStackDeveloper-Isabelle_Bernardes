@@ -14,6 +14,7 @@ export const Home = () => {
   const { t } = useTranslation();
   const { openModalJobsList, openModalJob } = useContext(JobsContext);
 
+
   return (
     <HomepageTemplate>
       {openModalJobsList ? <Modal /> : null}

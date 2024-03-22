@@ -1,16 +1,22 @@
 import styled from 'styled-components'
 
 export const HeroContainerStyle = styled.section`
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  min-width: 100vw;
-
+  min-height: 100vh;
+  max-width: 100vw;
   padding: 0px 130px;
-  overflow-x: hidden;
-
   background-color: var(--black-13);
+
+  .spotlight-container{
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 
   .spotlight {
     border-radius: 50%;
@@ -41,8 +47,6 @@ display: flex;
     position: absolute;
   }
 
- 
-
 .crazyText {
     z-index: 3;
     max-height: 46vh;
@@ -60,7 +64,6 @@ display: flex;
       line-height: 0.85;
       letter-spacing: 0.02em;
     }
-
   } 
 
   .itens-bottom {
@@ -116,6 +119,69 @@ display: flex;
     }
     70% {
       right: -200px;
+    }
+  }
+
+  @media (max-width: 490px){
+    padding: 0px 24px;
+
+    .bgHero {
+      top: 30%;
+    }
+    .crazyText {   
+
+    h1 {
+      font-family: forma-djr-banner, monospace;
+      height: 100%;
+      text-align: center;
+      color: var(--black-3);
+      font-size: 14vw;
+      line-height: 0.85;
+      letter-spacing: 0.02em;
+        }
+    } 
+
+    .sptl-1 {
+      animation: left 8s infinite;
+    }
+
+    .sptl-2 {
+      animation: right 8s infinite;
+    }
+
+    .itens-bottom {
+      .itens-bottom_item {
+        display: none;
+      }
+
+      .work-button-container {
+          width: 100%;
+          
+          button {
+            font-size: var(--text-2);
+            font-weight: var(--text-weight-Bold);
+            }
+          }
+    }
+
+    @keyframes left {
+      0%,
+      100% {
+        left:400px;
+      }
+      70% {
+        left: -200px;
+      }
+    }
+
+    @keyframes right {
+      0%,
+      100% {
+        right: 400px;
+      }
+      70% {
+        right: -200px;
+      }
     }
   }
 `
