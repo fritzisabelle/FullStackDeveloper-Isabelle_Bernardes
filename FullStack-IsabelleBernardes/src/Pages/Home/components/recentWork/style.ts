@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const RecentWorkStyle = styled.section`
-position: relative;
-z-index: 7;
+/* z-index: 7; */
 color: var(--black-3);
 padding: 6em 0px;
 
@@ -44,13 +43,16 @@ padding: 6em 0px;
     padding: 3em 0px;
 
     .jobCards-container {
-  padding: 0px 20px;    
-  }
+      padding: 0px 20px;
+      overflow-x: scroll;
+    }
   }
 
 `
 
 export const Title = styled(motion.h3)`
+position: relative;
+  z-index: 8;
   font-size: var(--title-h3);
   white-space: nowrap;
   transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -62,11 +64,14 @@ export const Title = styled(motion.h3)`
   }
 
   @media (max-width: 720px) {
+    z-index: 999;
     font-size: var(--title-h4);
   }
 `
 
 export const Subtitle = styled(motion.h2)`
+position: relative;
+  z-index: 8;
   font-size: var(--title-h2);
   white-space: nowrap;
   transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);

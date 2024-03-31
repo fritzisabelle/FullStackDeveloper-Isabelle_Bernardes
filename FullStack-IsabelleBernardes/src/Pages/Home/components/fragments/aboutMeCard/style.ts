@@ -46,4 +46,8 @@ padding: 1.25em 1.5em;
     color: var(--black-2);
     font-size: .9em;
 }
+
+@media (max-width: 550px){
+    min-width: 85vw;
+}
 `

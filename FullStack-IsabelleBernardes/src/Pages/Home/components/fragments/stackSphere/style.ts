@@ -25,4 +25,12 @@ align-items: center;
 .itemTagCloud:hover {
     color: var(--orange)
 }
+
+@media (max-width: 550px){
+    position: static;
+    
+    .tagcloud {
+        right: 0;
+    }
+}
 `

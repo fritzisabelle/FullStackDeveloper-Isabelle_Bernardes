@@ -83,4 +83,15 @@ ${({ jobCategory }) => {
                 `;
         }
     }}
+
+@media (max-width: 720px){
+    min-width: 90%;
+    height: fit-content;
+
+    .jobCard_cover {
+        width: 100%;
+        height: 28em;
+        object-fit: cover;
+    }
+}
 `

@@ -4,7 +4,8 @@ export const StackSectionStyle = styled.section`
 display: flex;
 padding: 3em;
 
-.stackSection_column1{
+
+.stackSection_column1 {
     z-index: 1;
     width: 45%;
     display: flex;
@@ -30,7 +31,7 @@ padding: 3em;
         }
     }
 
-    .stackSection_column1_title{
+    .stackSection_column1_title {
         position: relative;
         margin-left: -75px;
         padding-bottom: 8px;
@@ -48,6 +49,21 @@ padding: 3em;
 
 .stackSection_column2_stackCloud-container{
     z-index: 0;
+}
+
+@media (max-width: 550px){
+    flex-direction: column;
+
+    .stackSection_column1 {
+        flex-direction: column;
+        width: 100%;
+
+        .stackSection_column1_title {
+            position: relative;
+            margin-left: -45px;
+            font-size: 95px;
+        }
+    }
 }
 
 `

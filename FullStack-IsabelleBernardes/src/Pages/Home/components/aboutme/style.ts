@@ -47,8 +47,34 @@ overflow-x: hidden;
     display: flex;
     gap: 1em;
 
-    justify-content: center ;
+    justify-content: center;
 }
+
+@media (max-width: 490px){
+    .textDetail {
+        font-size: 4em;
+        overflow-x: hidden;
+    }
+    .textTop{
+        margin-bottom: -60px;
+    }
+
+    .textBottom{
+        margin-top: -60px;
+        word-wrap: break-word;
+    }
+    .profilePicture-container{
+        padding: 24px 0px;
+    }
+
+    .softSkills-cards-container{
+        border: 1px solid red;
+        overflow-y: scroll;
+        justify-content: left;
+        padding: 0px 20px;
+    }
+}
+
 `
 
 export const DetailTitle = styled(motion.p)`

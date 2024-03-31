@@ -15,7 +15,7 @@ export const HeroContainerStyle = styled.section`
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 
   .spotlight {
@@ -51,7 +51,6 @@ export const HeroContainerStyle = styled.section`
     z-index: 3;
     max-height: 46vh;
     padding-top: 4px;
-    overflow-y: hidden;
     width: 100vw;
     word-wrap: break-word;
 
@@ -122,7 +121,7 @@ export const HeroContainerStyle = styled.section`
     }
   }
 
-  @media (max-width: 490px){
+  @media (max-width: 556px){
     padding: 0px 24px;
 
     .bgHero {
