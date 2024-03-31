@@ -68,7 +68,6 @@ overflow-x: hidden;
     }
 
     .softSkills-cards-container{
-        border: 1px solid red;
         overflow-y: scroll;
         justify-content: left;
         padding: 0px 20px;

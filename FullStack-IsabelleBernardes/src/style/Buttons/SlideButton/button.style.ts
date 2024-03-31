@@ -15,7 +15,7 @@ padding: .5em;
 border: none;
 outline: none;
 position: relative;
-border-radius: 32px;
+/* border-radius: 32px; */
 
 font-weight: 500;
 font-size: 1em;
@@ -32,7 +32,7 @@ font-style: normal;
     right: 0;
     background-color: var(--orange);
     z-index: -1;
-    border-radius: 32px;
+    /* border-radius: 32px; */
     
 }
 
@@ -40,7 +40,7 @@ font-style: normal;
 &:focus::before{
     transition: transform 300ms ease-in-out;
     transform: scaleX(1);
-    border-radius: 32px;
+    /* border-radius: 32px; */
 }
 
 img {
@@ -85,6 +85,10 @@ ${({ buttonStyle }) => {
                         &:hover {
                             transform: translateY(-8px);
                             transition: 200ms, border-radius 200ms;
+                            border-radius: 32px;
+                        }
+
+                        &::before {
                             border-radius: 32px;
                         }
                     `;

@@ -5,7 +5,7 @@ import { TagCloudStyle } from './style';
 
 export const TextShpere = () => {
     const ref = useRef<HTMLDivElement>(null);
-    const [radius, setRadius] = useState(150);
+    const [radius, setRadius] = useState(350);
 
     useEffect(() => {
         return () => {
@@ -13,18 +13,11 @@ export const TextShpere = () => {
             const container = ".tagcloud";
             const texts = hardSkills;
 
-            if (window.innerWidth > 460) {
-                setRadius(350);
-            }
-
             const options = {
                 radius: radius,
                 itemClass: "itemTagCloud",
                 keep: true,
             };
-
-
-
 
             TagCloud(container, texts, options);
         };

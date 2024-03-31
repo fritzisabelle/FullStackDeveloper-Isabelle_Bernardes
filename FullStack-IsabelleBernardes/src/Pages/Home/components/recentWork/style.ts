@@ -20,7 +20,6 @@ padding: 6em 0px;
     justify-content: center;
     padding-top: 4em;
 
-
     .button-seeMore{
       display: flex;
       align-items: center;
@@ -30,7 +29,7 @@ padding: 6em 0px;
       color: var(--black-3);
       background-color: transparent;
       border: 1px solid var(--black-3);
-      border-radius: 50px;
+      /* border-radius: 50px; */
     }
     
     .button-seeMore:hover{
