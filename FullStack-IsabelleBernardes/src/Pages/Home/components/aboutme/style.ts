@@ -50,7 +50,7 @@ overflow-x: hidden;
     justify-content: center;
 }
 
-@media (max-width: 490px){
+@media (max-width:760px){
     .textDetail {
         font-size: 4em;
         overflow-x: hidden;

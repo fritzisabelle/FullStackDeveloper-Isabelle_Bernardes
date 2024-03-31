@@ -107,4 +107,32 @@ h1 {
 
     }
 }
+
+@media (max-width: 760px){
+.content_container{
+    padding: 100px 24px 0px;
+    display: flex;
+    flex-direction: column;
+    color: var(--black-1);
+}
+h1 {
+    font-size: 24px;
+}
+.jobsListContainer {
+    .filterContainer{
+        gap: 16px;
+    }
+
+    .jobsMosaicContainer{
+        display: flex;
+        overflow-y: hidden;
+        
+        .jobCard {
+            min-width: 300px; 
+        }
+
+    }
+}
+
+}
 `
