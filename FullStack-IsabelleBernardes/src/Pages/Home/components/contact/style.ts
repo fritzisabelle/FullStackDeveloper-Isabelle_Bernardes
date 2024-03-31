@@ -67,4 +67,14 @@ align-items: center;
         }
     }
 }
+
+@media (max-width: 460px){
+  .scrollContainer{
+    h2 {
+      font-size: var(--title-h3);
+    }
+
+    animation: scrollText 30s linear infinite;
+}
+}
 `
