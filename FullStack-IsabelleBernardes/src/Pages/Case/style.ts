@@ -5,8 +5,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-
-
 .content_container{
     width: 1180px;
     max-width: 100%;
@@ -103,10 +101,9 @@ justify-content: center;
 }
 
 .separator{
-    
     overflow-x: hidden;
-    margin: 64px -160px;
-    width: 2000px;
+    margin: 64px 0px;
+    width: 100%;
     height: .5px;
     background-color: var(--black-10);
 }
@@ -129,7 +126,7 @@ justify-content: center;
     }
 }
 
-@media (max-width: 720px){
+@media (max-width: 920px){
 .gallery-Container{
     .cover{
         height: 250px;
@@ -158,8 +155,6 @@ justify-content: center;
     margin: 64px 0px;
     width: 100%;
 }
-}
-
 .footerContainer{
     .buttonsContainer{
         gap:24px;
@@ -172,5 +167,8 @@ justify-content: center;
         }
     }
 }
+}
+
+
 
 `

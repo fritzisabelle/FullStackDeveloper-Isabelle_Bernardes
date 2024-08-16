@@ -7,6 +7,7 @@ import { stacks } from "../../../src/utils/jobsList"
 import { Footer } from "../../components/Footer";
 import { Slide } from "react-toastify";
 import { SlideButton } from "../../style/Buttons/SlideButton/slideButton.component";
+import { Link } from 'react-router-dom';
 
 export const RecentWork = () => {
     const { t } = useTranslation();
@@ -39,7 +40,9 @@ export const RecentWork = () => {
                                                 <h3>{job.name}</h3>
                                                 <p>{job.description}</p>
                                             </div>
-                                            <SlideButton buttonStyle="CaseButton">Ver mais detalhes</SlideButton>
+                                            <Link to={`/case/${job.id}`}>
+                                                <SlideButton buttonStyle="CaseButton">Ver mais detalhes</SlideButton>
+                                            </Link>
                                         </div>
                                     </div>
                                 )
