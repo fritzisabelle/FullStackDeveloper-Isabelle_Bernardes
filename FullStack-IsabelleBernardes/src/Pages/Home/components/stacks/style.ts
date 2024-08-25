@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const StackSectionStyle = styled.section`
 display: flex;
 padding: 3em;
+max-width: 1440px;
+margin: 0 auto;
 
 
 .stackSection_column1 {
@@ -17,7 +19,7 @@ padding: 3em;
         position: relative;
         align-self: flex-start;
         margin-bottom: -140px;
-        left: -100px;
+        left: -120px;
         opacity: 30%;
         animation: rotation 15s infinite linear;
     }

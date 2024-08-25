@@ -51,16 +51,16 @@ export const HeroSection = () => {
             </div>
             <div className="itens-bottom">
                 <div className="itens-bottom_item">
-                    <p>DESIGN</p>
-                    <p>{t("tech-heroDetail")}</p>
+                    <p>{t("home.hero.design-heroDetail")}</p>
+                    <p>{t("home.hero.tech-heroDetail")}</p>
                 </div>
                 <div className="work-button-container">
                     <IntersectionDetail />
-                    <button onClick={() => scrollToSection("recentWorkSection")}>{t("work-heroDetail")}</button>
+                    <button onClick={() => scrollToSection("recentWorkSection")}>{t("home.hero.work-heroDetail")}</button>
                 </div>
                 <div className="itens-bottom_item">
                     <p>UI DESIGN</p>
-                    <p>{t("dev-heroDetail")}</p>
+                    <p>{t("home.hero.dev-heroDetail")}</p>
                 </div>
             </div>
         </HeroContainerStyle>

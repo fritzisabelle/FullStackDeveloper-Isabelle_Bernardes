@@ -9,7 +9,7 @@ export const HeaderTemplateStyle = styled.header`
   z-index: 999;
 
   &.open {
-    z-index: 1;
+    z-index: 998;
     box-shadow: 1px 2px 6px 0px rgba(1, 1, 1, 0.04);
   }
 
@@ -38,6 +38,12 @@ export const HeaderTemplateStyle = styled.header`
     align-items: center;
     justify-content: space-between;
   }
+
+  .BurguerMenuTrigger {
+      filter: invert();
+      display: block;
+      index: 1000;
+    }
 
   @media (min-width: 1024px) {
     .BurguerMenuTrigger {

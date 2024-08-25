@@ -65,6 +65,10 @@ align-items: center;
             border: 1px solid var(--black-3);
             border-radius: 1rem;
         }
+
+        a {
+          color: inherit;
+        }
     }
 }
 
@@ -75,6 +79,20 @@ align-items: center;
     }
 
     animation: scrollText 30s linear infinite;
-}
+  }
+
+  .contactButtons-container{
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      margin-bottom: 16px;
+
+      h3 {
+      margin-bottom: -8px;
+      }
+    }
+  }
 }
 `

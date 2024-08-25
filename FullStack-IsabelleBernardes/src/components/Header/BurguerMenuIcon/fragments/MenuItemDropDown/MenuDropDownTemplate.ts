@@ -7,12 +7,14 @@ export const DropDrowTemplate = styled.ul`
   width: 100%;
   background-color: #fafafa;
   box-shadow: 1px 2px 4px 1px rgba(1, 1, 1, 0.05);
+  z-index: 999;
 
   .active {
     display: flex;
     flex-direction: column;
     transform: translateY(0);
     transition: 2s ease;
+    
   }
 
   .inactive {

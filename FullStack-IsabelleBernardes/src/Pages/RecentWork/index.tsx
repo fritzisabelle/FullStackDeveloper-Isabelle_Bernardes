@@ -10,16 +10,18 @@ import { SlideButton } from "../../style/Buttons/SlideButton/slideButton.compone
 import { Link } from 'react-router-dom';
 
 export const RecentWork = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const { openModalJobsList, openModalJob } = useContext(JobsContext);
+
+    const currentLanguage = i18n.language;
 
     return (
         <Template>
             <div className="content_container">
                 <div className="jobsListContainer">
-                    <h1>Choose by stack, category or project type...</h1>
+                    <h1>{t("JobsPage.header.jobsTitle")}</h1>
                     <div className="filterContainer">
-                        <p>{t("filter")}:</p>
+                        <p>{t("JobsPage.header.filter")}:</p>
                         <div className="filterOptions">
                             {stacks ? (
                                 stacks.map(stack => {
@@ -38,10 +40,15 @@ export const RecentWork = () => {
                                         <div className="JobCardHoverInfo">
                                             <div className="projectInfoContainer">
                                                 <h3>{job.name}</h3>
-                                                <p>{job.description}</p>
+                                                {currentLanguage ==='en' ? (
+                                                    <p>{job.description?.enDescription}</p>
+                                                ):(
+                                                    <p>{job.description?.ptDescription}</p>
+                                                )}
+                                                
                                             </div>
                                             <Link to={`/case/${job.id}`}>
-                                                <SlideButton buttonStyle="CaseButton">Ver mais detalhes</SlideButton>
+                                                <SlideButton buttonStyle="CaseButton">{t("home.hero.detailButton")}</SlideButton>
                                             </Link>
                                         </div>
                                     </div>

@@ -93,9 +93,11 @@ export const HeroContainerStyle = styled.section`
         
         button {
           color: var(--black-1);
-          background-color: var(--black-13);
-          border: none;
+          // background-color: var(--black-13);
+          background-color: transparent;
           font-weight: var(--text-weight-Bold);
+          font-size: inherit;
+          border: none;
           }
         }
     }

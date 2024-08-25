@@ -10,76 +10,101 @@ import onlineIcon from "../../assets/imgs/online-icon.svg"
 import { SlideButton } from "../../style/Buttons/SlideButton/slideButton.component";
 
 export const Case = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { id } = useParams();
   const project = JobList.find(job => job.id === parseInt(id, 10));
+  const gallery = project.galleryImgs.slice(1,4);
+
+  const currentLanguage = i18n.language;
 
   return (
     <Template>
       <div className="content_container">
         <div className="gallery-Container">
           <div className="cover">
-            <img src={project.cover} alt="project cover" />
+            <img src={project.galleryImgs[0]} alt="project cover" />
           </div>
           <div className="galleryList-Container">
-            <div className="galleryItem">
-              <img src="" alt="" />
-            </div>
-            <div className="galleryItem">
-              <img src="" alt="" />
-            </div>
-            <div className="galleryItem">
-              <img src="" alt="" />
-            </div>
+            {gallery.map((itemGallery, index) => {
+              index+=1;
+              return (
+              <div className="galleryItem" key={index}>
+                <img src={itemGallery} alt="" />
+              </div>
+              )
+            })}
           </div>
         </div>
         <div className="DetailSection-Container">
           <div className="DetailTitle-container">
-            <p>{t("jobContext")}</p>
+            <p>{t("JobsPage.body.jobContext")}</p>
             <h3>{project.name}</h3>
           </div>
           <div className="JobContextDetails">
             <div className="JobContextDetails-detailBox">
-              <p className="subtitle_detailSection">{t("problem")}</p>
+              <p className="subtitle_detailSection">{t("JobsPage.body.problem")}</p>
               <div className="detailDivisor"></div>
-              <p className="text_detailSection">{t("problemDetail")}</p>
+              {currentLanguage === 'en' ? (
+                <p className="text_detailSection">{project.context.enProblem}</p>
+                ):(
+                <p className="text_detailSection">{project.context.enProblem}</p>
+                )}
             </div>
             <div className="JobContextDetails-detailBox">
-              <p className="subtitle_detailSection">{t("context")}</p>
+              <p className="subtitle_detailSection">{t("JobsPage.body.context")}</p>
               <div className="detailDivisor"></div>
-              <p className="text_detailSection">{t("contextDetail")}</p>
+              {currentLanguage === 'en' ? (
+                <p className="text_detailSection">{project.context.enContext}</p>
+                ):(
+                <p className="text_detailSection">{project.context.ptContext}</p>
+                )}
             </div>
             <div className="JobContextDetails-detailBox">
-              <p className="subtitle_detailSection">{t("projectObjective")}</p>
+              <p className="subtitle_detailSection">{t("JobsPage.body.projectObjective")}</p>
               <div className="detailDivisor"></div>
-              <p className="text_detailSection">{t("projectObjectiveDetail")}</p>
+              
+              {currentLanguage === 'en' ? (
+                <p className="text_detailSection">{project.context.enObjective}</p>
+                ):(
+                <p className="text_detailSection">{project.context.ptObjective}</p>
+                )}
             </div>
             <div className="separator"></div>
           </div>
         </div>
         <div className="DetailSection-Container">
           <div className="DetailTitle-container">
-            <p>{t("strategy")}</p>
-            <h3>{t("strategyTitle")}</h3>
+            <p>{t("JobsPage.body.strategy")}</p>
+            <h3>{t("JobsPage.body.strategyTitle")}</h3>
           </div>
-          <p className="subtitle_detailSection strategyText">{t("strategyDetail")}</p>
+          {currentLanguage === 'en' ? (
+            <p className="subtitle_detailSection strategyText">{project.enStrategyDetail}</p>
+            ):(
+              <p className="subtitle_detailSection strategyText">{project.ptStrategyDetail}</p>
+          )}
+          
           <div className="separator"></div>
         </div>
         <div className="DetailSection-Container">
           <div className="DetailTitle-container">
-            <p>{t("mistakesSubtitle")}</p>
-            <h3>{t("mistakesTitle")}</h3>
+            <p>{t("JobsPage.body.mistakesSubtitle")}</p>
+            <h3>{t("JobsPage.body.mistakesTitle")}</h3>
           </div>
-          <p className="subtitle_detailSection strategyText">{t("mistakeText")}</p>
+          {currentLanguage === 'en' ? (
+              <p className="subtitle_detailSection strategyText">{project.mistakes.mistake_1.enMistakeDetail}</p>
+            ):(
+              <p className="subtitle_detailSection strategyText">{project.mistakes.mistake_1.ptMistakeDetail}</p>
+          )}
+          
           <div className="separator"></div>
         </div>
 
         <div className="footerContainer">
           <div className="readArticle--container">
-            <p>{t("readArticle")}</p>
+            <p>{t("JobsPage.footer.readArticleText")}</p>
             <Link to="/recentWork">
               <SlideButton buttonStyle='Icon&Text'>
-                {t("readArticleText")}
+                {t("JobsPage.footer.articleButtonText")}
                 <img src={arrowRight} alt="arrow icon" />
               </SlideButton>
             </Link>
@@ -87,15 +112,15 @@ export const Case = () => {
           <div className="buttonsContainer">
             <SlideButton buttonStyle='Icon&Text'>
               <img src={githubIcon} alt="github icon" />
-              {t("githubButton")}
+              {t("JobsPage.footer.githubButton")}
             </SlideButton>
             <SlideButton buttonStyle='Icon&Text'>
               <img src={behanceIcon} alt="behance icon" />
-              {t("behanceButton")}
+              {t("JobsPage.footer.behanceButton")}
             </SlideButton>
             <SlideButton buttonStyle='CaseButton'>
               <img src={onlineIcon} alt="online icon" />
-              {t("onlineButton")}
+              {t("JobsPage.footer.onlineButton")}
             </SlideButton>
           </div>
         </div>

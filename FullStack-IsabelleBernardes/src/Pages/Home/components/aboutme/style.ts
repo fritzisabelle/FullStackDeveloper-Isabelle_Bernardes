@@ -59,18 +59,32 @@ overflow-x: hidden;
         margin-bottom: -60px;
     }
 
+    .side-picture {
+        display: none;
+    }
+
+    .middle-picture{
+        width: 60%;
+        left: 20%;
+    }
+
+    .profilePicture-container{
+        padding: 24px 0px;
+    }
+
     .textBottom{
         margin-top: -60px;
         word-wrap: break-word;
     }
-    .profilePicture-container{
-        padding: 24px 0px;
+
+    .profilePicture__container {
+        margin-bottom: 32px;
     }
 
     .softSkills-cards-container{
         overflow-y: scroll;
         justify-content: left;
-        padding: 0px 20px;
+        padding: 0px 20px 16px;
     }
 }
 

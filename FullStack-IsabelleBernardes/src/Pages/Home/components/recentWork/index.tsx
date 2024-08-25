@@ -17,8 +17,8 @@ export const RecentWorkSection = () => {
 
     return (
         <RecentWorkStyle id="recentWorkSection">
-            <Title style={{ x }} className='recentWork-subtitle'>RECENT WORK <span>RECENT WORK</span> RECENT WORK <span>RECENT WORK</span> RECENT WORK <span>RECENT WORK</span> </Title>
-            <Subtitle style={{ x: x2 }}>DESIGN & DEVELOPMENT</Subtitle>
+            <Title style={{ x }} className='recentWork-subtitle'>{t("home.JobSection.title")} <span>{t("home.JobSection.title")}</span> {t("home.JobSection.title")} <span>{t("home.JobSection.title")}</span> {t("home.JobSection.title")} <span>{t("home.JobSection.title")}</span> </Title>
+            <Subtitle style={{ x: x2 }}>{t("home.JobSection.subtitle")}</Subtitle>
             <div className="jobCards-container">
                 {JobsToRender ? (
                     JobsToRender.map((job) => {
@@ -32,7 +32,7 @@ export const RecentWorkSection = () => {
             <div className="button-container">
                 <Link to="/recentWork">
                     <Button buttonStyle='Icon&Text'>
-                        {t("seeMore")}
+                        {t("home.JobSection.seeMore")}
                         <img src={arrowRight} alt="arrow icon" />
                     </Button>
                 </Link>

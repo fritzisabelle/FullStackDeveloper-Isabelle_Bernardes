@@ -22,10 +22,10 @@ export const Modal = () => {
 
                     <button className="modalButton closeButton" onClick={() => closeModal()}>
                         <p className="closeModalIcon">X</p>
-                        <p>{t("close")}</p>
+                        <p>{t("JobsPage.header.close")}</p>
                     </button>
                     {openModalJobsList ? (<button className="modalButton nextButton" onClick={() => setOpenModalJobsList(false)}>
-                        <p>{t("next")}</p>
+                        <p>{t("JobsPage.header.next")}</p>
                         <img src={arrowRight} alt="arrow right icon" />
                     </button>) : null}
 
@@ -33,7 +33,7 @@ export const Modal = () => {
                 <div className="jobsListContainer">
                     <h1>Choose by stack, category or project type...</h1>
                     <div className="filterContainer">
-                        <p>{t("filter")}:</p>
+                        <p>{t("JobsPage.header.filter")}:</p>
                         <div className="filterOptions">
                             {stacks ? (
                                 stacks.map(stack => {

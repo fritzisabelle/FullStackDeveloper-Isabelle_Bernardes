@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface IJobsContext {
     openModalJob: boolean,
@@ -17,16 +18,20 @@ export const JobsContext = createContext({} as IJobsContext);
 export const JobsProvider = ({ children }: IJobsProvider) => {
     const [openModalJob, setOpenModalJob] = useState(false);
     const [openModalJobsList, setOpenModalJobsList] = useState(false);
+    const navigate = useNavigate();
 
     const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
+        navigate('/', { replace: true });
 
-        if (section) {
-            window.scrollTo({
-                top: section.offsetTop,
-                behavior: "smooth"
-            });
-        }
+        setTimeout(() => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        }, 100);
     };
 
     return (

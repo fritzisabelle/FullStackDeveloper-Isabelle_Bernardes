@@ -11,7 +11,7 @@ export const StacksSection = () => {
             <div className='stackSection_column1'>
                 <img src={wheel} alt="circle detail spinning" className='stackSection_column1_imgDetail' />
                 <h2 className='stackSection_column1_title'>STACKS</h2>
-                <p className='stackSection_column1_subtitle'>{t("aboutMyStacks")}</p>
+                <p className='stackSection_column1_subtitle'>{t("home.StacksSection.aboutMyStacks")}</p>
             </div>
             <div className="stackSection_column2_stackCloud-container">
                 <TextShpere />

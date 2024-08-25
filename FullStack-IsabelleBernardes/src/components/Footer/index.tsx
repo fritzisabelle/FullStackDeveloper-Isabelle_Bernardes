@@ -21,9 +21,9 @@ export const Footer = () => {
                     <img src={intersection} alt="detail" />
                     <img src={intersection} alt="detail" />
                 </div>
-                <button onClick={() => scrollToTop()}>{t("backToTop")}</button>
+                <button onClick={() => scrollToTop()}>{t("home.footer.backToTop")}</button>
             </div>
-            <small>{t("rightsReserved")}</small>
+            <small>{t("home.footer.rightsReserved")}</small>
         </FooterStyle>
     )
 }

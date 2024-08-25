@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutMeCardStyle = styled.div`
-width: 20em;
+width: 21em;
 height: 17em;
 background-color: transparent;
 border-radius: 1.25em;
