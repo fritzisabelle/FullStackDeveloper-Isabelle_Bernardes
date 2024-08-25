@@ -1,13 +1,83 @@
 {
   "translation": {
-    "welcome": "Bem vindo ao melhor webapp do mundo!",
-    "subtitle": "Onde você pode encontrar tudo que você quiser",
-    "who": "QUEM SOU EU",
-    "what": "O QUE EU FAÇO",
-    "work": "PROJETOS RECENTES",
-    "contact": "FALE COMIGO",
-    "projectTypeAppWeb": "Aplicação Web",
-    "motolinkDescription": "Uma aplicação web que conecta as melhores empresas aos motoboys mais rápidos do mercado",
-    "detailButton": "Ver mais detalhes"
+    "header" :{
+      "who": "SOBRE MIM",
+      "what": "STACKS",
+      "work": "PROJETOS RECENTES",
+      "contact": "ENTRE EM CONTATO"
+    },
+    "home":{
+      "hero":{
+        "detailButton": "Ver mais detalhes",
+        "tech-heroDetail": "TECNOLOGIA",
+        "work-heroDetail": "TRABALHO",
+        "dev-heroDetail": "DESENVOLVIMENTO",
+        "design-heroDetail": "DESIGN"
+      },
+      "JobSection": {
+        "title": "TRABALHOS RECENTES",
+        "subtitle": "DESIGN & DESENVOLVIMENTO",
+        "projectTypeAppWeb": "Aplicação Web",
+        "seeMore": "Ver mais projetos",
+        "JobMotolink": {
+          "motolinkDescription": "Uma aplicação web que conecta as melhores empresas aos motoboys mais rápidos do mercado"
+        }
+      },
+      "AboutMeSection":{
+        "title": {
+          "top": "POR TRÁS",
+          "bottom": "DO TALENTO"
+        },
+        "description":"Natural do Rio de Janeiro, pode me chamar de Isa. Não escapei do clichê carioca, portanto adoro ir a praia. Amo cozinhar e ler livros. Gosto de ficar no meu próprio espaço, embora também me divirta em momentos de distração socializando."
+      },
+      "StacksSection":{
+        "aboutMyStacks": "Como desenvolvedora full stack eu busco me manter atualizada com as linguagens, frameworks e tecnologias mais utilizadas no mercado, focando em ser o mais abrangente e assertiva possível para entregar soluções não só visualmente agradáveis, mas também úteis."
+      },
+      "ContactSection": {
+        "contactCTA": "VAMOS CONVERSAR? - ENTRE EM CONTATO - NÃO FIQUE TÍMIDO - QUE TAL TOMAR UM CAFÉ? -",
+        "linkedinCTA": "CONECTE-SE COMIGO",
+        "emailCTA": "ME MANDE UM EMAIL",
+        "emailButtonCTA": "Clique aqui para me enviar um email",
+        "githubCTA": "ME ENCONTRE NO GITHUB"
+      },
+      "footer": {
+        "backToTop": "voltar ao topo",
+        "rightsReserved": "Isabelle Bernardes © Todos os direitos reservados."
+      }
+    },
+    "JobsPage":{
+      "header":{
+        "close": "FECHAR",
+        "next": "PRÓXIMO",
+        "filter": "Filtro",
+        "jobsTitle": "Escolha por stack, categoria ou tipo de projeto..."
+      },
+      "body": {
+        "jobContext": "Dando algum contexto",
+        "problem": "Problema",
+        "context": "Contexto",
+        "projectObjective": "Objetivo do Projeto",
+        "strategy": "“Se eu tivesse 8 horas para cortar uma árvore, eu passaria 6 delas afiando meu machado.”",
+        "strategyTitle": "Estratégia de Desenvolvimento",
+        "mistakesSubtitle": "Falhe rápido, aprenda mais rápido ainda",
+        "mistakesTitle": "Oportunidades de melhoria"
+      },
+      "JobsDetails":{
+        "MotolinkProject":{
+          "problemDetail": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi similique sit at iste. Dicta at quaerat tempora, necessitatibus molestiae, praesentium excepturi reiciendis sequi, magni iure exercitationem suscipit eveniet cum?",
+          "contextDetail": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi similique sit at iste. Dicta at quaerat tempora, necessitatibus molestiae, praesentium excepturi reiciendis sequi, magni iure exercitationem suscipit eveniet cum?",
+          "problemObjectiveDetail": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi similique sit at iste. Dicta at quaerat tempora, necessitatibus molestiae, praesentium excepturi reiciendis sequi, magni iure exercitationem suscipit eveniet cum?",
+          "strategyDetail": "Lorem ipsum dolor sit amet consectetur. Pretium quis at fusce potenti quis aenean elit commodo. Facilisis pellentesque neque leo est mauris ut. Lectus eu id sit eget fringilla.",
+          "mistakeDetail": "Lorem ipsum dolor sit amet consectetur. Pretium quis at fusce potenti quis aenean elit commodo. Facilisis pellentesque neque leo est mauris ut. Lectus eu id sit eget fringilla."
+        }
+      },
+      "footer": {
+        "readArticleText": "Quer mais detalhes sobre esse processo?",
+        "articleButtonText": "Leia o artigo no Linkedin",
+        "githubButton": "See repository on Github",
+        "behanceButton": "See study case on Behance",
+        "onlineButton": "See project online"
+      }
+    }
   }
 }

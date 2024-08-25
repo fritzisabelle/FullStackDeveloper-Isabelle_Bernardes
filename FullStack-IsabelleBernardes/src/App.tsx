@@ -1,17 +1,20 @@
+import React from 'react'
 import { useTranslation } from "react-i18next";
-import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { GlobalStyles } from "./style/GlobalStyle";
 import HeaderTemplate from "./components/Header";
-import { HomeTemplate } from "./Pages/Home/Home";
+import { RouterMain } from "./Routes/RouterMain";
+import { JobsProvider } from './providers/JobsContext';
 
 function App() {
   const { t } = useTranslation();
 
   return (
     <div className="App">
-      <HeaderTemplate />
-      <HomeTemplate />
-      <GlobalStyles />
+      <JobsProvider>
+        <HeaderTemplate />
+        <RouterMain />
+        <GlobalStyles />
+      </JobsProvider>
     </div>
   );
 }

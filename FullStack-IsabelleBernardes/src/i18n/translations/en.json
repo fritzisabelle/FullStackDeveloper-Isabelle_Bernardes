@@ -1,13 +1,83 @@
 {
   "translation": {
-    "welcome": "Welcome to the best webapp in the world!",
-    "subtitle": "Where you can find anything you want",
-    "who": "WHO AM I",
-    "what": "WHAT I DO",
-    "work": "RECENT WORK",
-    "contact": "TALK TO ME",
-    "projectTypeAppWeb": "Web Application",
-    "motolinkDescription": "A WebApplication wich connects the best companies to the fastest delivery boys on the market",
-    "detailButton": "See more details"
+    "header": {
+      "who": "ABOUT ME",
+      "what": "STACKS",
+      "work": "RECENT WORK",
+      "contact": "GET IN TOUCH"
+    }, 
+    "home": {
+      "hero": {
+        "detailButton": "See more details",
+        "tech-heroDetail": "TECHNOLOGY",
+        "work-heroDetail": "WORK",
+        "dev-heroDetail": "DEVELOPMENT",
+        "design-heroDetail": "DESIGN"
+      },
+      "JobSection": {
+        "title": "RECENT WORK",
+        "subtitle": "DESIGN & DEVELOPMENT",
+        "projectTypeAppWeb": "Web Application",
+        "seeMore": "See more projects",
+        "JobMotolink": {
+          "motolinkDescription": "A WebApplication which connects the best companies to the fastest delivery boys on the market"
+        }
+      },
+      "AboutMeSection": {
+        "title": {
+          "top": "BEHIND",
+          "bottom": "THE SKILLS"
+        },
+        "description": "Natural from Rio de Janeiro, you can call me Isa. True to the cliché, I love going to the beach. I love cooking and reading books. I enjoy staying in my own space, but I also appreciate moments of extroversion."
+      },
+      "StacksSection": {
+        "aboutMyStacks": "As a Full Stack Developer, I try to keep up with the most used languages, frameworks, and libraries, focusing on being as comprehensive as possible to deliver not only stunning but useful solutions"
+      },
+      "ContactSection": {
+        "contactCTA": "LET’S TALK? - GET IN TOUCH - DON’T BE SHY - WANNA HAVE A COFFEE? -",
+        "linkedinCTA": "CONNECT WITH ME",
+        "emailCTA": "SEND ME AN EMAIL",
+        "emailButtonCTA": "Click here to send me an email",
+        "githubCTA": "FIND ME ON GITHUB"
+      },
+      "footer": {
+        "backToTop": "back to the top",
+        "rightsReserved": "Isabelle Bernardes © All rights reserved."
+      }
+    },
+    "JobsPage": {
+      "header": {
+        "close": "CLOSE",
+        "next": "NEXT",
+        "filter": "Filter",
+        "jobsTitle": "Choose by stack, category, or project type..."
+      },
+      "body": {
+        "jobContext": "Giving some context",
+        "problem": "Problem",
+        "context": "Context",
+        "projectObjective": "Project Objective",
+        "strategy": "“If I had eight hours to chop down a tree, I'd spend six sharpening my axe.”",
+        "strategyTitle": "Development strategy",
+        "mistakesSubtitle": "Fail fast, learn faster",
+        "mistakesTitle": "Mistakes to avoid next time"
+      },
+      "JobsDetails": {
+        "MotolinkProject": {
+          "problemDetail": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi similique sit at iste. Dicta at quaerat tempora, necessitatibus molestiae, praesentium excepturi reiciendis sequi, magni iure exercitationem suscipit eveniet cum?",
+          "contextDetail": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi similique sit at iste. Dicta at quaerat tempora, necessitatibus molestiae, praesentium excepturi reiciendis sequi, magni iure exercitationem suscipit eveniet cum?",
+          "projectObjectiveDetail": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi similique sit at iste. Dicta at quaerat tempora, necessitatibus molestiae, praesentium excepturi reiciendis sequi, magni iure exercitationem suscipit eveniet cum?",
+          "strategyDetail": "Lorem ipsum dolor sit amet consectetur. Pretium quis at fusce potenti quis aenean elit commodo. Facilisis pellentesque neque leo est mauris ut. Lectus eu id sit eget fringilla.",
+          "mistakeDetail": "Lorem ipsum dolor sit amet consectetur. Pretium quis at fusce potenti quis aenean elit commodo. Facilisis pellentesque neque leo est mauris ut. Lectus eu id sit eget fringilla."
+        }
+      },
+      "footer": {
+        "readArticleText": "Want more details of this process?",
+        "articleButtonText": "Read article on Linkedin",
+        "githubButton": "See repository on Github",
+        "behanceButton": "See study case on Behance",
+        "onlineButton": "See project online"
+      }
+    }
   }
 }

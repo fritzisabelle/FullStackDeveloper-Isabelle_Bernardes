@@ -11,4 +11,15 @@ export const MenuItemStyle = styled.li`
     background-color: var(--orange);
     color: var(--gray-bg);
   }
+
+  button {
+    font-size: inherit;
+    font-family:inherit;
+    color: inherit;
+    padding: none;
+    margin: none;
+    text-style: none;
+    background: none;
+    border:none;
+  }
 `;

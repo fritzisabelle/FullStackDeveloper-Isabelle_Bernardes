@@ -5,10 +5,11 @@ export const HeaderTemplateStyle = styled.header`
   top: 0px;
   left: 0px;
   min-width: 100%;
-  padding: 20px;
+  padding: 1.5em;
+  z-index: 999;
 
   &.open {
-    z-index: 1;
+    z-index: 998;
     box-shadow: 1px 2px 6px 0px rgba(1, 1, 1, 0.04);
   }
 
@@ -17,12 +18,13 @@ export const HeaderTemplateStyle = styled.header`
   align-items: center;
 
   .logo {
+    filter: invert();
     height: auto;
     width: 124px;
   }
 
   ul {
-    display: none;
+    display: none;    
   }
 
   .utils-menu {
@@ -37,38 +39,46 @@ export const HeaderTemplateStyle = styled.header`
     justify-content: space-between;
   }
 
+  .BurguerMenuTrigger {
+      filter: invert();
+      display: block;
+      index: 1000;
+    }
+
   @media (min-width: 1024px) {
     .BurguerMenuTrigger {
       display: none;
     }
 
     ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1.5fr 1fr;
-      text-align: center;
-      justify-items: center;
-      width: 51%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
 
       li {
-        a {
-          color: var(--black-13);
-          font-weight: 500;
+        box-sizing: content-box;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        
+        button {
+          background-color: transparent;
+          border: none;
+          color: var(--gray-bg);
+          font-weight: var(--text-weight-Light);
           text-decoration: none;
           font-size: 16px;
           letter-spacing: 1px;
 
           &:hover {
             color: orange;
-            font-weight: 700;
           }
         }
-        display: flex;
-        align-items: center;
-        padding: 2px;
       }
     }
 
     .logo {
+      filter: invert();
       height: auto;
       width: auto;
     }

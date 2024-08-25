@@ -1,31 +1,36 @@
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import { HeaderTemplateStyle } from "../../style/HeaderStyle/HeaderTemplate";
-import logo from "../../assets/logo-isabellebernardes.png";
+import logo from "../../assets/logo-isabelleamorim.png";
 import { DropDownMenu } from "./BurguerMenuIcon";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import menuIcon from "../../assets/burguer-menu-icon.png";
+import { Link } from 'react-router-dom';
+import { JobsContext } from "../../providers/JobsContext";
 
 function HeaderTemplate() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const { scrollToSection } = useContext(JobsContext);
 
   return (
     <>
       <HeaderTemplateStyle className={`red ${open ? "open" : "close"}`}>
-        <img className="logo" src={logo} />
+        <Link to={"/"}>
+          <img className="logo" src={logo} />
+        </Link>
         <ul>
           <li>
-            <a href="">{t("who")}</a>
+            <button onClick={() => scrollToSection("recentWorkSection")}>{t("header.work")}</button>
           </li>
           <li>
-            <a href="">{t("what")}</a>
+            <button onClick={() => scrollToSection("aboutMe")}>{t("header.who")}</button>
           </li>
           <li>
-            <a href="">{t("work")}</a>
+            <button onClick={() => scrollToSection("stacks")}>{t("header.what")}</button>
           </li>
           <li>
-            <a href="">{t("contact")}</a>
+            <button onClick={() => scrollToSection("contact")}>{t("header.contact")}</button>
           </li>
         </ul>
         <div className="utils-menu">
