@@ -97,6 +97,7 @@ justify-content: center;
         align-self: self-end;
         max-width: 100%;
         width: 860px;
+        padding-bottom: 1rem;
     }
 }
 

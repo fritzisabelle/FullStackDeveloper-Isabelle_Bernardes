@@ -13,8 +13,10 @@ export const Case = () => {
   const { t, i18n } = useTranslation();
   const { id } = useParams();
   const project = JobList.find(job => job.id === parseInt(id, 10));
+  console.log('Project:', project)
   const gallery = project.galleryImgs.slice(1,4);
-
+  const mistakesList = project.mistakes;
+  
   const currentLanguage = i18n.language;
 
   return (
@@ -47,7 +49,7 @@ export const Case = () => {
               {currentLanguage === 'en' ? (
                 <p className="text_detailSection">{project.context.enProblem}</p>
                 ):(
-                <p className="text_detailSection">{project.context.enProblem}</p>
+                <p className="text_detailSection">{project.context.ptProblem}</p>
                 )}
             </div>
             <div className="JobContextDetails-detailBox">
@@ -90,12 +92,11 @@ export const Case = () => {
             <p>{t("JobsPage.body.mistakesSubtitle")}</p>
             <h3>{t("JobsPage.body.mistakesTitle")}</h3>
           </div>
-          {currentLanguage === 'en' ? (
-              <p className="subtitle_detailSection strategyText">{project.mistakes.mistake_1.enMistakeDetail}</p>
-            ):(
-              <p className="subtitle_detailSection strategyText">{project.mistakes.mistake_1.ptMistakeDetail}</p>
-          )}
-          
+          {Object.entries(project.mistakes).map(([key, mistake]) => (
+              <p key={key} className="strategyText">
+                {currentLanguage === 'en' ? mistake.enMistakeDetail : mistake.ptMistakeDetail}
+              </p>
+            ))}         
           <div className="separator"></div>
         </div>
 

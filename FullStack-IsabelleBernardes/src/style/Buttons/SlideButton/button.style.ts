@@ -19,7 +19,7 @@ position: relative;
 
 font-weight: 500;
 font-size: 1em;
-font-family: Forma DJR Banner;
+font-family: Forma DJR Banner, sans-serif;
 font-style: normal;
 
 
