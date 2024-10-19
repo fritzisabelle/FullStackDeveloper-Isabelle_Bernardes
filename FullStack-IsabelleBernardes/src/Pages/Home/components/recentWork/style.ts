@@ -47,6 +47,12 @@ padding: 6em 0px;
     }
   }
 
+  @media (min-width: 1180px) {
+    .jobCards-container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+  }
 `
 
 export const Title = styled(motion.h3)`
