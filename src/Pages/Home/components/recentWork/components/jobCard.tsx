@@ -50,10 +50,11 @@ export interface IJobsProps {
 export const JobCardContainer = (job: IJobsProps) => {
     const { t,i18n } = useTranslation()
     const currentLanguage = i18n.language;
+    const jobCover = job.cover;
 
     return (
         <JobCardTemplate jobCategory={job.category}>
-            <img src={job.cover} alt="" className="jobCard_cover" />
+            <img src={jobCover} alt="" className="jobCard_cover" />
             <h4 className="jobCard_ProjectCategory_Tag">{job.category}</h4>
             <div className="jobCard_details">
                 <div className="jobCard_details_info">
